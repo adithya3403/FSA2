@@ -60,18 +60,32 @@ public class d4p3 {
     }
 
     static boolean isBalanced(String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        int[] freq = new int[26];
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            map.put(c, map.getOrDefault(i, 0) + 1);
+            freq[s.charAt(i) - 'a']++;
         }
         int count = 0;
-        for (char c : map.keySet()) {
-            if (count == 0)
-                count = map.get(c);
-            else if (count != map.get(c))
-                return false;
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] != 0) {
+                count++;
+            }
         }
-        return true;
+        int[] freq2 = new int[count];
+        int k = 0;
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] != 0) {
+                freq2[k++] = freq[i];
+            }
+        }
+        Arrays.sort(freq2);
+        if (freq2[0] == freq2[count - 1]) {
+            return true;
+        } else if (freq2[0] == freq2[count - 2] && freq2[count - 1] - freq2[count - 2] == 1) {
+            return true;
+        } else if (freq2[1] == freq2[count - 1] && freq2[0] == 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
