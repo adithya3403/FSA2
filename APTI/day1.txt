@@ -1,0 +1,55 @@
+/* PnC */
+1. number of 4 digit palindromes:
+a) 9 b) 90 c) 900 d) 9000
+ans: 90
+_  _  _  _ = 90
+9 10  1  1
+
+2. 3 digit numbers are odd and do not contain 5 in any position(with repetition)
+a) 196 b) 224 c) 288 d) 324
+ans: 288
+_ _ _ = 288
+8 9 4
+_ _ _ = 196
+7 7 4
+
+3. between 700 and 999 inclusive, how many are odd and do not contain 0 in any place(no repetitions)
+ans:
+_ _ _ = 21 * 3 = 63
+3 7 1
+                        = 63+28 = 91
+_ _ _ = 14 * 2 = 28
+2 7 1
+
+
+
+/* ALGEBRA */
+1. A 1000kg solution of salt and water is 30% strong(salt). To make it 50% strong, how much salt should be added to it?
+a) 200kgs b) 300kgs c) 400kgs d) none
+ans: 400kgs
+30% strong = 300kgs salt + 700kgs water
+50/x=(300+x)/(1000+x)
+x=400kgs
+(OR)
+n1w1=n2w2 (for constants only)
+70*1000=50*V
+V=1400
+400kgs
+
+2. A 3000kg sugar-water solution is 25% strong. to make it 40% strong, how much sugar should be added ?
+ans: 750kgs
+S-750, W-2250
+40/100=(750+x)/(3000+x)
+x=750kgs
+(OR)
+75*3000=60*V
+V=3750
+750kgs
+
+3. 6000kg is 25% strong. to make it 10% strong, how much water should be added? 
+ans: 9000kgs
+25*6000=10V
+V=15000
+diff=9000kgs
+
+4. 
