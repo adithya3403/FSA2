@@ -1,0 +1,42 @@
+commercial math
+    percentages
+    profit and loss
+    time and distance
+    time and work
+counting
+    PnC
+    probability
+    statistics
+algebra
+    polynomials
+    exponents
+    fractions
+    ratios
+    equations:
+        1 unknowns
+        2 unknowns
+        age related questions
+    inequalities and absolute values
+    venn diagrams
+    sequences and series
+    AP, GP, HP and progressions
+    simple and compound interest
+    functions and symbols
+    LCM and HCF
+geometry:
+    plane geometry
+    solid geometry
+    coordinate geometry
+
+data interpretation/graphs
+data suffieciency
+logical reasoning
+    alphabet/number series
+    missing numbers and odd ones out
+    blood relationships
+    coding and decoding
+    arrangement questions
+    cubes
+    2D puzzles
+    3D puzzles
+    patterns
