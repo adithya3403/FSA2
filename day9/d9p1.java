@@ -30,16 +30,33 @@ output = 02:13:19
 */
 
 import java.util.*;
+
 public class d9p1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String time = sc.nextLine();
-        String first = time.substring(0, 2);
-        if (time.substring(time.length() - 2).equals("PM"))
-            first = Integer.toString(Integer.parseInt(first) + 12);
-        else if (first.equals("12"))
-            first = "00";
-        System.out.println(first + time.substring(2, time.length() - 2));
+        String s = sc.next();
+        System.out.println(convertedTime(s));
         sc.close();
+    }
+
+    static String convertedTime(String s) {
+        StringBuilder sb = new StringBuilder();
+        int hh = Integer.parseInt(s.substring(0, 2));
+        int mm = Integer.parseInt(s.substring(3, 5));
+        int ss = Integer.parseInt(s.substring(6, 8));
+        String ampm = s.substring(8, 10);
+        if (ampm.equals("PM")) {
+            if (hh != 12)
+                hh += 12;
+        } else {
+            if (hh == 12)
+                hh = 0;
+        }
+        sb.append(hh < 10 ? "0" + hh : hh);
+        sb.append(":");
+        sb.append(mm < 10 ? "0" + mm : mm);
+        sb.append(":");
+        sb.append(ss < 10 ? "0" + ss : ss);
+        return sb.toString();
     }
 }
