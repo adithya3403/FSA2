@@ -44,7 +44,7 @@ public class d1p2 {
         String s = sc.next();
         int k = sc.nextInt();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
             if (Character.isLetter(c))
                 c = (char) (Character.isUpperCase(c) ? 'A' + (c - 'A' + k) % 26 : 'a' + (c - 'a' + k) % 26);
