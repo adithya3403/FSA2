@@ -48,6 +48,7 @@ The decoded string is "a" repeated 8301530446056247680 times.  The 1st letter is
 */
 
 import java.util.*;
+
 public class d1p1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -56,16 +57,17 @@ public class d1p1 {
         System.out.println(decoded(s, k));
         sc.close();
     }
+
     static String decoded(String s, int k) {
-        StringBuilder sb=new StringBuilder();
-        if (k==1) {
+        StringBuilder sb = new StringBuilder();
+        if (k == 1) {
             sb.append(s.charAt(0));
         } else {
-            for (int i=0; i<s.length(); i++) {
+            for (int i = 0; i < s.length(); i++) {
                 if (Character.isDigit(s.charAt(i))) {
-                    int n=s.charAt(i)-'0';
-                    String temp=sb.toString();
-                    for (int j=0; j<n-1; j++) {
+                    int n = s.charAt(i) - '0';
+                    String temp = sb.toString();
+                    for (int j = 0; j < n - 1; j++) {
                         sb.append(temp);
                     }
                 } else {
@@ -73,6 +75,6 @@ public class d1p1 {
                 }
             }
         }
-        return sb.toString().substring(k-1, k);
+        return sb.toString().substring(k - 1, k);
     }
 }
