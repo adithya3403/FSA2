@@ -1,0 +1,62 @@
+TIME AND WORK
+
+if A can complete a job in N days, one day 1/N
+W=1/T
+
+A-X days alone
+B-Y days alone
+A and B - xy/(x+y)
+
+A, B and C take x, y and z days 
+ABC together=xyz/(xy+yz+zx) days
+
+if A is R% more efficient than B
+Ta=(100/(100+R))*Tb
+
+if A is R% less efficient than B
+Ta=(100/(100-R))*Tb
+
+if A is R% as efficient than B
+Ta=(100/R)*Tb
+
+general equation for time and work : n1w1+n2w2=1
+
+-----------QUESTIONS--------------
+1.  A can complete a job in 12 days, B in 20 days alone
+    for the first X days, they are together and A leaves
+    B completed the remanding job alone in 4 days
+    find X
+    a) 5 b) 6 c) 7.5 d) 9
+Ans: X(0.1333)+0.2=1, so X=6
+
+2.  A, B and C can complete a job in 12, 15 and 20 days
+    after first 2 days, C left the job
+    A and B will take how many days to complete the rest of the job ?
+    a) 
+Ans: 2(1/12+1/15+1/20)+X(1/12+1/15)=1, so 2(0.2)+X(.15)=1 so X=4
+
+
+---from pdf---
+11. 24(1/y)+3(1/12)=1 so y=32
+    now xy/(x+y)=12 and y=32, so 1/x+1/32=1/12, 1/x=0.05208 so x=19.2
+
+12. 1000 in 6 and 1000 in 4
+    so 6*4/10=2.4hrs=144mins
+
+13. A-8, B-6, C-12
+    6(1/8)+8(1/6)+c(1/12)=3 so c=11
+
+Q1. A is 60% more efficient than B
+    together A and B complete the job in 40days
+    A alone will take how many days ?
+    a) 
+ans: Ta=(100/(100+60))*Tb so Ta=5Tb/8
+    1/Ta+1/Tb=1/40
+    8/5Tb+5/5Tb=1/40 so 13/5Tb=1/40 so Tb=104
+    so Ta=5*104/8=65
+
+18. A is 40% less than B, A and B in 56 days, B ?
+ans: Ta=(100/(100-40))*Tb so Ta=5Tb/3
+    1/Ta+1/Tb=1/56
+    3/5Tb+5/5Tb=1/56 so 8/5Tb=1/56 so Tb=89.6
+    so Ta=5*89.6/3=149.6
