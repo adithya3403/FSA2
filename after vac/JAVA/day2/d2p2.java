@@ -45,20 +45,6 @@ Sample Output-2:
 ----------------
 7
 
-Algorithm: 
-The solution to this problem can be solved using dynamic programming.
-
-Create an array 'steps' of size N+1 and initialize all elements to -1.
-Set steps[1] = 0, as the initial level is level 1 and 0 steps are required to reach level 1.
-Starting from level 2, check if the current level is less than or equal to twice the previous level.
-If yes, then check if the number of diamonds required to reach the current level is greater than the number of diamonds available.
-If yes, then set steps[i] = steps[i-1] + 1.
-Else, set steps[i] = min(steps[i-1], steps[i/2] + 1) + 1.
-Repeat step 3 for all levels from 2 to N.
-Return the value of steps[N].
-The number of steps will be the minimum of either completing each level one by one or skipping some levels using diamonds.
-The above algorithm finds the minimum number of steps required to finish the game.
-
 */
 
 import java.util.*;
@@ -66,24 +52,23 @@ import java.util.*;
 public class d2p2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int D = sc.nextInt();
-        int[] steps = new int[N + 1];
-        Arrays.fill(steps, -1);
-        steps[1] = 0;
-        for (int i = 2; i <= N; i++) {
-            if (i <= 2 * steps[i - 1]) {
-                if (D > 0) {
-                    steps[i] = steps[i - 1] + 1;
-                    D--;
-                } else {
-                    steps[i] = steps[i - 1];
-                }
-            } else {
-                steps[i] = Math.min(steps[i - 1], steps[i / 2] + 1) + 1;
-            }
-        }
-        System.out.println(steps[N]);
+        int n = sc.nextInt();
+        int d = sc.nextInt();
+        System.out.println(solve(n, d));
         sc.close();
+    }
+
+    static int solve(int n, int d) {
+        int steps = 0;
+        while (n > 1) {
+            if (n % 2 == 0 && d > 0) {
+                n /= 2;
+                d--;
+            } else {
+                n--;
+            }
+            steps++;
+        }
+        return steps;
     }
 }
