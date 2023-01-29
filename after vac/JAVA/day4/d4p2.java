@@ -32,31 +32,97 @@ here we dont have second frequency count so print -1
 input = 11
 output = -1
 
+case = 1
+input =
+123412213
+output =
+3
+
+case = 2
+input = 
+9797793333
+output =
+9
+7
+
+case = 3
+input = 1111
+output = -1
+
+case = 4
+input = 1112223334444
+output =
+1
+2
+3
+
+case = 5
+input = 104441112204
+output =
+0
+2
+
+case = 6
+input = 123
+output = -1
+
+case = 7
+input = 2244
+output = -1
+
+case = 8
+input = 5
+output = -1
+
 */
 
 import java.util.*;
+
 public class d4p2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String num = sc.next();
-        int[] freq = new int[10];
-        for (int i = 0; i < num.length(); i++) {
-            freq[num.charAt(i) - '0']++;
+        String str = sc.next();
+        secondHighest(str);
+        sc.close();
+    }
+
+    static void secondHighest(String str) {
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            int key = str.charAt(i) - '0';
+            if (map.containsKey(key))
+                map.put(key, map.get(key) + 1);
+            else
+                map.put(key, 1);
         }
-        int max1 = 0, max2 = 0;
-        for (int i = 0; i < 10; i++) {
-            if (freq[i] > freq[max1]) {
-                max2 = max1;
-                max1 = i;
-            } else if (freq[i] > freq[max2] && freq[i] != freq[max1]) {
-                max2 = i;
+        List<Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
+            @Override
+            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
+                return o2.getValue() - o1.getValue();
+            }
+        });
+        Map<Integer, List<Integer>> map2 = new LinkedHashMap<>();
+        for (Map.Entry<Integer, Integer> entry : list) {
+            int key = entry.getValue();
+            int value = entry.getKey();
+            if (map2.containsKey(key)) {
+                map2.get(key).add(value);
+            } else {
+                List<Integer> list2 = new ArrayList<>();
+                list2.add(value);
+                map2.put(key, list2);
             }
         }
-        if (freq[max2] == 0) {
-            System.out.println(-1);
-        } else {
-            System.out.println(max2);
+        int count = 0;
+        for (Map.Entry<Integer, List<Integer>> entry : map2.entrySet()) {
+            if (count == 1) {
+                for (int i : entry.getValue())
+                    System.out.println(i);
+                return;
+            }
+            count++;
         }
-        sc.close();
+        System.out.println(-1);
     }
 }
