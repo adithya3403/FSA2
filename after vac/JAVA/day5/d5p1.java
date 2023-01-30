@@ -53,11 +53,11 @@ public class d5p1 {
             }
         }
         int x = sc.nextInt();
-        System.out.println(findSmallest(arr, x));
+        System.out.println(find(arr, x));
         sc.close();
     }
 
-    static boolean findSmallest(int[][] arr, int x) {
+    static boolean find(int[][] arr, int x) {
         int m = arr.length, n = arr[0].length;
         int l = 0, r = m * n - 1;
         while (l <= r) {
