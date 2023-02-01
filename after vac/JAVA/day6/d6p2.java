@@ -31,17 +31,20 @@ public class d6p2 {
         String str = sc.next();
         int i = 0, j = 0, count = 0;
         Set<Character> set = new HashSet<>();
+        // List<String> list = new ArrayList<>();
         while (j < str.length()) {
             if (set.contains(str.charAt(j))) {
                 set.remove(str.charAt(i++));
             } else {
                 set.add(str.charAt(j++));
                 if (j - i == 3) {
+                    // list.add(str.substring(i, j));
                     count++;
                     set.remove(str.charAt(i++));
                 }
             }
         }
+        // System.out.println(list);
         System.out.println(count);
         sc.close();
     }
