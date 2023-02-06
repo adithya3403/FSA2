@@ -72,34 +72,47 @@ So, the total number of times they have to refill is 0.
 */
 
 import java.util.*;
+
 public class d19p3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        System.out.println(solve(arr, a, b));
+        int[] guests = new int[n];
+        for (int i = 0; i < n; i++) {
+            guests[i] = sc.nextInt();
+        }
+        int capacityA = sc.nextInt();
+        int capacityB = sc.nextInt();
+        System.out.println(solve(guests, capacityA, capacityB));
         sc.close();
     }
-    static int solve(int[] arr, int a, int b) {
-        int i = 0, j = arr.length - 1, ans = 0;
-        int ca = a, cb = b;
-        while (i <= j) {
-            if (ca >= arr[i]) {
-                ca -= arr[i];
-                i++;
-            } else if (cb >= arr[j]) {
-                cb -= arr[j];
-                j--;
-            } else {
-                ans++;
-                ca = a;
-                cb = b;
+
+    static int solve(int[] guests, int capacityA, int capacityB) {
+        int i = 0, j = guests.length - 1, count = 0;
+        while (i < j) {
+            if (guests[i] <= capacityA)
+                capacityA -= guests[i];
+            else {
+                capacityA = capacityB;
+                count++;
             }
+            if (guests[j] <= capacityB)
+                capacityB -= guests[j];
+            else {
+                capacityB = capacityA;
+                count++;
+            }
+            i++;
+            j--;
         }
-        return ans;
+        if (i == j) {
+            if (guests[i] <= capacityA)
+                capacityA -= guests[i];
+            else if (guests[i] <= capacityB)
+                capacityB -= guests[i];
+            else
+                count++;
+        }
+        return count;
     }
 }
