@@ -48,17 +48,16 @@ public class d20p2 {
     }
 
     static int findDivisors(String s, int k) {
-        int i = 0, j = 0;
-        int ans = 0;
+        int i = 0, j = 0, ans = 0;
+        int num = Integer.parseInt(s);
         while (j < s.length()) {
-            if (j - i + 1 < k) {
+            if (j - i + 1 < k)
                 j++;
-            } else if (j - i + 1 == k) {
+            else if (j - i + 1 == k) {
                 String sub = s.substring(i, j + 1);
-                if (Integer.parseInt(sub) != 0
-                        && Integer.parseInt(s) % Integer.parseInt(sub) == 0) {
+                int x = Integer.parseInt(sub);
+                if (x != 0 && num % x == 0)
                     ans++;
-                }
                 i++;
                 j++;
             }
