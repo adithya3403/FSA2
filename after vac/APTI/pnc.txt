@@ -1,0 +1,84 @@
+define nPr=n!/(n-r)!
+find 6p4: 6!/(6-4)!=6!/2!=6*5*4*3*2*1/2*1=6*5*4*3=30*12=360
+
+### if 'm' things are similar of one kind and 'p' things are similar of a second kind
+and 'r' things are similar of third kind, total number of arrangements is _____
+ans: (m+p+r)!m!p!r!
+
+examples:
+malayalam, 4a's, 2l's, 2m's, 1y's
+total ways=9!/4!2!2!1!=9*8*7*6*5*4!/4!4=9*8*7*6*5/4=18*210=3780
+
+assassination: 3a's, 4s's, 2i's, 2n's, 1t's, 1o's
+total=10!/3!2!2!
+
+madam: aa, mm, d
+ways=>
+M____ = 4
+MM___
+
+Q) using 0,1,4,7,8,9 how many 5 digit numbers can be formed ?
+a) repetition is allowed
+b) repetition is not allowed
+ans:
+a) _ _ _ _ _ = 5.6.6.6.6 = 6480
+b) _ _ _ _ _ = 5.5.4.3.2 = 600
+
+Q) How many 4 digit numbers can be formed using 1,2,3,4,5 such that
+a) Repetition of digits is allowed 
+b) Repetition of digits is.not allowed
+ans: 1 2 3 4 5
+a) _ _ _ _ = 5.5.5.5=625
+b) _ _ _ _ = 5.4.3.2=20.6=120
+
+Q) How many of the numbers in above question are Odd in each case?
+a) Repetition of digits is allowed
+b) Repetition of digits is.not allowed
+ans:
+a)  _ _ _ 1/3/5=5*5*5*3=375
+b)  1 _ _ 3/5 = 1*3*2*2=12*3=36
+    2 _ _ 1/3/5 = 1*3*2*3*2=36
+    total=36+36=72
+
+Q) using 0,1,4,5,7,8,9 how many 4 digit odd numbers can be formed ?
+a) Repetition of digits is allowed
+b) Repetition of digits is.not allowed
+ans:
+a)  _ _ _ _ = 6*7*7*4=42*28=1176
+b)  _ _ _ _ = 5.5.4.4=400
+
+Q) How many 3 digit numbers are Odd and do not contain 5 in any place?
+RA...
+RNA
+180...224....196....288...
+ans:
+RA:  _ _ [1/3/7/9] = 8.9.4=36*8=288
+RNA: 
+    starts with even: _ _ [1/3/7/9] = 7*8*4=224
+    starts with odd:  _ _ [1/3/7/9] = 8*9*4=288
+    total=224+288=512
+
+
+if r things are chosen from a group of n things, then the number of selections is ncr=npr/r!
+
+if a polygon has n sides how many diagonals will it have?  
+ans;nc2-n
+if there are n people in a gathering the no of shake hands will 
+ANS:nC2
+In a comitte to be formed by 6 members is to be chosen
+
+a panel of 6 is to be chosen
+7 russians and 5 ukranians
+in how many wyas u can choose
+a) exactly 3 russians
+b) atleast 2 ukranians
+c) no particular condition
+
+From 3 $100 ; 4$50 and 5 $10 notes..3 are lost 
+In how many ways 
+There is maximum loss
+Minimum loss
+Not maximum nor minimum
+ans: a) 3c3=1
+b) 5c3=5!/3!2!=5*4*3/3*2=10
+c) 12c3-(1+10)=220-11=209
