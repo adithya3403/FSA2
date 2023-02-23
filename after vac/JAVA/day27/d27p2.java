@@ -1,5 +1,3 @@
-// Grade: 60/100
-
 /*
 
 You are given a positive integer num. You may swap any two digits of num that have the same parity 
@@ -36,24 +34,16 @@ public class d27p2 {
     }
 
     static String maximumSwap(int num) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> even = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> odd = new PriorityQueue<>(Collections.reverseOrder());
         String s = Integer.toString(num);
-        for (int i = 0; i < s.length(); i++)
-            pq.add(s.charAt(i) - '0');
-        int i = 0;
-        while (i < s.length() && s.charAt(i) - '0' == pq.peek()) {
-            pq.poll();
-            i++;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) % 2 == 0) even.add(s.charAt(i) - '0');
+            else odd.add(s.charAt(i) - '0');
         }
-        if (i == s.length())
-            return s;
-        int j = i + 1;
-        while (j < s.length() && s.charAt(j) - '0' != pq.peek())
-            j++;
-        char[] arr = s.toCharArray();
-        char temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        return new String(arr);
+        String ans = "";
+        for (int i = 0; i < s.length(); i++)
+            ans += (s.charAt(i) % 2 == 0) ? even.poll() : odd.poll();
+        return ans;
     }
 }
