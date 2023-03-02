@@ -1,4 +1,3 @@
-package day32;
 /*
 
 Bob is working on numbers.
