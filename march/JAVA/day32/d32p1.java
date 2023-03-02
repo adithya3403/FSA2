@@ -37,11 +37,11 @@ public class d32p1 {
     }
 
     static int findMaxProfit(int[] arr) {
-        int[] dp=new int[arr.length];
-        int max=0;
-        for(int i=1;i<arr.length;i++){
-            dp[i]=Math.max(dp[i-1]+arr[i]-arr[i-1],0);
-            max=Math.max(max,dp[i]);
+        int[] dp = new int[arr.length];
+        int max = 0;
+        for (int i = 1; i < arr.length; i++) {
+            dp[i] = Math.max(dp[i - 1] + arr[i] - arr[i - 1], 0);
+            max = Math.max(max, dp[i]);
         }
         return max;
     }
