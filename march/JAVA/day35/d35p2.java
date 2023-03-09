@@ -60,5 +60,6 @@ public class d35p2 {
             }
         }
         System.out.println(count);
+        sc.close();
     }
 }
