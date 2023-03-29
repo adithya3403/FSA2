@@ -1,3 +1,5 @@
+// Grade 83.33
+
 /*
 
 There are n persons on a social media website. 
