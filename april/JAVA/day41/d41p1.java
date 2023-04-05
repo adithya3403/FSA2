@@ -1,3 +1,5 @@
+// code correct but not passing test cases
+
 /*
 
 You are given an array of people, people, which are the attributes of some people in a queue 
