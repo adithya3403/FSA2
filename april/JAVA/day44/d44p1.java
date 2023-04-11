@@ -1,3 +1,5 @@
+// grade: 25/100
+
 /*
 
 Viraj Aanand is a wedding planner, He ordered his assistant to decorate a wall.
