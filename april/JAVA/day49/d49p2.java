@@ -9,11 +9,7 @@ Remove the closest non-star character to its left, as well as remove the star it
 Return the string after all stars have been removed.
 
 input= kes**hav**mem**orial
-<<<<<<< HEAD
-output= khmorial
-=======
 output= khmorial 
->>>>>>> 3d6879e2fef94bba048549a309674de0fe63d495
 
 */
 
@@ -23,7 +19,6 @@ public class d49p2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
-<<<<<<< HEAD
         Stack<Character> st = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '*') {
@@ -40,7 +35,6 @@ public class d49p2 {
         }
         System.out.println(sb.reverse());
         sc.close();
-=======
         System.out.println(remove(s));
         sc.close();
     }
@@ -54,6 +48,5 @@ public class d49p2 {
         StringBuilder sb = new StringBuilder();
         while (!st.isEmpty()) sb.append(st.pop());
         return sb.reverse().toString();
->>>>>>> 3d6879e2fef94bba048549a309674de0fe63d495
     }
 }
