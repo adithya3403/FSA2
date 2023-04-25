@@ -5,11 +5,7 @@ P-th largest height of the players. Given an array of heights[] and the value of
 Help the coach to find the P'th largest height.
 
 Note: You are suppose to print the P'th largest height in the sorted order of heights[].
-<<<<<<< HEAD
 Not the P'th distinct height.
-=======
-      Not the P'th distinct height.
->>>>>>> 3d6879e2fef94bba048549a309674de0fe63d495
 
 Input Format:
 -------------
@@ -96,10 +92,6 @@ class d49p1 {
                 root = rotateLeft(root);
             }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 3d6879e2fef94bba048549a309674de0fe63d495
         return root;
     }
 
@@ -129,11 +121,6 @@ class d49p1 {
             root = insertNode(root, a);
         }
         inorder(root);
-<<<<<<< HEAD
         sc.close();
     }
 }
-=======
-    }
-} 
->>>>>>> 3d6879e2fef94bba048549a309674de0fe63d495
